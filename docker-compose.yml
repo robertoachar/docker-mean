@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/usr/src/app
+    working_dir: /usr/src/app
+    networks:
+      - mean-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+      - "49153:49153"
+    volumes:
+      - ./frontend:/usr/src/app
+    working_dir: /usr/src/app
+    networks:
+      - mean-network
+
+  mongodb:
+    image: mongo
+    networks:
+      - mean-network
+
+networks:
+  mean-network:
+    driver: bridge
