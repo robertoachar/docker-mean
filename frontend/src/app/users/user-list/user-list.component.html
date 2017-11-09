@@ -1,0 +1,27 @@
+<p>
+  <button class="btn btn-primary" (click)="add()">Add user</button>
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>
+        <button class="btn btn-info" (click)="edit(user._id)">Edit</button>
+        <button class="btn btn-danger" (click)="remove(user._id)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-modal unique="user-form" title="User" (onCancel)="cancel()" (onSave)="save()">
+  <app-user-form [user]="user"></app-user-form>
+</app-modal>
