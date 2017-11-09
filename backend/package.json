@@ -1,0 +1,47 @@
+{
+  "name": "docker-mean",
+  "version": "1.0.0",
+  "description": "A playground for Docker with MEAN stack.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "homepage": "https://github.com/robertoachar/docker-mean#readme",
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "mean",
+    "mongodb",
+    "express",
+    "angular",
+    "node",
+    "live-reload"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/docker-mean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/docker-mean/issues"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "dotenv": "4.0.0",
+    "express": "4.16.2",
+    "helmet": "3.9.0",
+    "mongoose": "4.13.0",
+    "morgan": "1.9.0",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "4.10.0",
+    "nodemon": "1.12.1"
+  },
+  "private": true,
+  "license": "MIT"
+}
