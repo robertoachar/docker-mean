@@ -11,7 +11,7 @@ mongoose.connection.on('connected', () => {
   winston.info('Mongoose connected!');
 });
 
-mongoose.connection.on('disconnected', (err) => {
+mongoose.connection.on('disconnected', () => {
   winston.info('Mongoose disconnected!');
 });
 
