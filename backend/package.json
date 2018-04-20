@@ -28,6 +28,7 @@
     "url": "https://github.com/robertoachar/docker-mean/issues"
   },
   "dependencies": {
+    "@robertoachar/express-cors": "1.0.2",
     "body-parser": "1.18.2",
     "dotenv": "4.0.0",
     "express": "4.16.2",
