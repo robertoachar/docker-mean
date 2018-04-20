@@ -4,7 +4,6 @@ declare var $: any;
 
 @Injectable()
 export class ModalService {
-
   hide(id: String): void {
     this.modal(id, 'hide');
   }
@@ -15,9 +14,13 @@ export class ModalService {
 
   private modal(id: String, action: String): void {
     const component: String = `#${id}`;
+
     $(component).modal(action);
+
     $(component).on('shown.bs.modal', () => {
-      $(component).find('[autofocus]').focus();
+      $(component)
+        .find('[autofocus]')
+        .focus();
     });
   }
 }

@@ -4,12 +4,11 @@ declare var toastr: any;
 
 @Injectable()
 export class MessageService {
-
   options: any = {
-    'closeButton': true,
-    'positionClass': 'toast-bottom-center',
-    'progressBar': true,
-    'timeOut': '3000'
+    closeButton: true,
+    positionClass: 'toast-bottom-center',
+    progressBar: true,
+    timeOut: '3000'
   };
 
   error(message: string): void {

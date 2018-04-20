@@ -40,6 +40,22 @@ $ docker-compose up
 $ docker-compose down
 ```
 
+# User Endpoint
+
+Endpoint for managing users.
+
+| Method | Endpoint   | Description               |
+| ------ | ---------- | ------------------------- |
+| GET    | /users     | Retrieves a list of users |
+| GET    | /users/:id | Retrieves a specific user |
+| POST   | /users     | Creates a new user        |
+| PUT    | /users/:id | Updates user              |
+| DELETE | /users/:id | Deletes user              |
+
+# Postman
+
+* `postman/docker-mean.postman.json`
+
 # Author
 
 [Roberto Achar](https://twitter.com/robertoachar)

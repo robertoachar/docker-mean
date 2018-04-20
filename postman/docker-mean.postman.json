@@ -1,0 +1,124 @@
+{
+  "info": {
+    "_postman_id": "902eb140-f2d0-c656-75fa-2b6304a7a06c",
+    "name": "docker-mean",
+    "schema":
+      "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/users",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw":
+            "{\n  \"_id\": \"59c1b2c49ef4e4143cf62fa1\",\n  \"firstname\": \"Roberto\",\n  \"lastname\": \"Achar\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/users/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/api/users/59c1b2c49ef4e4143cf62fa1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "users", "59c1b2c49ef4e4143cf62fa1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/users/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw":
+            "{\n  \"firstname\": \"Roberto\",\n  \"lastname\": \"Achar\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/59c1b2c49ef4e4143cf62fa1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "users", "59c1b2c49ef4e4143cf62fa1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/users/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/api/users/59c1b2c49ef4e4143cf62fa1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "users", "59c1b2c49ef4e4143cf62fa1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

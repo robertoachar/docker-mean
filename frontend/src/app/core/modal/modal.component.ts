@@ -5,7 +5,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: 'modal.component.html'
 })
 export class ModalComponent {
-
   @Input() unique: string = undefined;
   @Input() title: string = undefined;
 

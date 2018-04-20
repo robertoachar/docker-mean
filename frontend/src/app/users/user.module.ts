@@ -9,22 +9,9 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    CoreModule
-  ],
-  exports: [
-    UserFormComponent,
-    UserListComponent
-  ],
-  declarations: [
-    UserFormComponent,
-    UserListComponent
-  ],
-  providers: [
-    UserService
-  ]
+  imports: [CommonModule, FormsModule, RouterModule, CoreModule],
+  exports: [UserFormComponent, UserListComponent],
+  declarations: [UserFormComponent, UserListComponent],
+  providers: [UserService]
 })
-export class UserModule { }
+export class UserModule {}
