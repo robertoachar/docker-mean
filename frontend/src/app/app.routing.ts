@@ -6,8 +6,8 @@ import { UserListComponent } from './users/user-list/user-list.component';
 import { UserFormComponent } from './users/user-form/user-form.component';
 
 const routes: Routes = [
-  { path: 'users', component: UserListComponent },
   { path: '', pathMatch: 'full', redirectTo: '/users' },
+  { path: 'users', component: UserListComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/page-not-found' }
 ];
@@ -16,4 +16,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRouting { }
+export class AppRouting {}

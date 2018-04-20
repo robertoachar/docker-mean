@@ -7,8 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   create(user: IUser) {
     return this.http.post(`${environment.api}/api/users`, user);
@@ -16,10 +15,6 @@ export class UserService {
 
   list(): Observable<IUser[]> {
     return this.http.get<IUser[]>(`${environment.api}/api/users`);
-  }
-
-  view(id: string) {
-    return this.http.get<IUser>(`${environment.api}/api/users/${id}`);
   }
 
   remove(id: string) {
@@ -30,4 +25,7 @@ export class UserService {
     return this.http.put(`${environment.api}/api/users/${user._id}`, user);
   }
 
+  view(id: string) {
+    return this.http.get<IUser>(`${environment.api}/api/users/${id}`);
+  }
 }

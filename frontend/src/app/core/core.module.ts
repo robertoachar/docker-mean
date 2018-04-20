@@ -6,15 +6,8 @@ import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [],
-  exports: [
-    ModalComponent
-  ],
-  declarations: [
-    ModalComponent
-  ],
-  providers: [
-    MessageService,
-    ModalService
-  ]
+  exports: [ModalComponent],
+  declarations: [ModalComponent],
+  providers: [MessageService, ModalService]
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -16,11 +16,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
     UserModule,
     AppRouting
   ],
-  declarations: [
-    AppComponent,
-    PageNotFoundComponent
-  ],
+  declarations: [AppComponent, PageNotFoundComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

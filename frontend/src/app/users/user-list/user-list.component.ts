@@ -8,9 +8,7 @@ import { MessageService } from '../../core/message.service';
 @Component({
   templateUrl: 'user-list.component.html'
 })
-
 export class UserListComponent implements OnInit {
-
   user: IUser = {} as any;
   users: IUser[] = [];
   private form: String = 'user-form';
@@ -18,7 +16,8 @@ export class UserListComponent implements OnInit {
   constructor(
     private message: MessageService,
     private modal: ModalService,
-    private userService: UserService) { }
+    private userService: UserService
+  ) {}
 
   ngOnInit() {
     this.load();
@@ -41,27 +40,28 @@ export class UserListComponent implements OnInit {
   }
 
   load() {
-    this.userService.list().subscribe(users => this.users = users);
+    this.userService.list().subscribe((users) => (this.users = users));
   }
 
   remove(id: string) {
-    this.userService.remove(id).subscribe(() => { this.load(); });
+    this.userService.remove(id).subscribe(() => {
+      this.load();
+    });
   }
 
   save() {
     if (!this.user._id) {
-      this.userService.create(this.user).subscribe(user => {
+      this.userService.create(this.user).subscribe((user) => {
         this.message.success('Created successfully');
         this.modal.hide(this.form);
         this.load();
       });
     } else {
-      this.userService.update(this.user).subscribe(user => {
+      this.userService.update(this.user).subscribe((user) => {
         this.message.success('Updated successfully');
         this.modal.hide(this.form);
         this.load();
       });
     }
   }
-
 }
