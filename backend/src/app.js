@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const error = require('./error');
 
 const app = express();
-const router = express.Router();
+const userRouter = require('./user/user.router');
 
 app.use(helmet());
 app.use(cors());
@@ -19,9 +19,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'It works!' });
 });
 
-app.use('/api', router);
-
-require('./user/user.router')(router);
+app.use('/api/users', userRouter);
 
 app.use(error.notFound);
 app.use(error.catchAll);
